@@ -1,0 +1,16 @@
+{
+    "name": "claud/avaliacao",
+    "description": "Projeto de avalia\u0000\u0000o para vaga de programador",
+    "autoload": {
+        "psr-4": {
+            "Claud\\Avaliacao\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cláudio Oliveira",
+            "email": "claudiooliveirajr1994@outlook.com"
+        }
+    ],
+    "require": {}
+}
