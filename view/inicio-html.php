@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <?php session_start();?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?=$titulo; ?></title>
@@ -30,7 +29,7 @@
     </div>
 </nav>
 <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron pt-5 pb-5">
         <h1><?=$titulo; ?></h1>
     </div>
     <?php if (isset($_SESSION['mensagem'])): ?>
