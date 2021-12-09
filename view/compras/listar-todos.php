@@ -13,7 +13,10 @@
     </tr>
     </thead>
 
-        <?php foreach ($compras as $compra){?>
+        <?php
+        $montante = 0;
+        foreach ($compras as $compra){
+            ?>
             <tbody>
             <tr>
             <th><?=  $compra->getId() ?> </th>
@@ -23,9 +26,11 @@
             <td> <?=$compra->getQuantidade()?> </td>
             <td> <?=$compra->getEndereco()?>  </td>
             <td> <?=$compra->getFornecedor() ?> </td>
+                <?php $montante += $compra->getPrecoUnit() * $compra->getQuantidade() ?>
             </tr>
             </tbody>
             <?php } ?>
+            <label class="lead pb-3">O valor total acumulado em compras é de: R$<?= number_format($montante, 2, ',', '.');?></label>
 </table>
 
 
