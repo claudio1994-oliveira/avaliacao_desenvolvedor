@@ -3,3 +3,4 @@ vendor
 composer.lock
 dados - Copia.txt
 db.sqlite
+.env

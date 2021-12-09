@@ -40,7 +40,7 @@ class Persistencia implements InterfaceControladorRequisicao
                 $compra->setComprador($comprador);
                 $compra->setDescricao($descricao);
                 $compra->setPrecoUnit($precoUnit);
-                $compra->setQtd($qtd);
+                $compra->setQuantidade($qtd);
                 $compra->setEndereco($endereco);
                 $compra->setFornecedor($fornecedor);
                 // Insere os dados no Banco
