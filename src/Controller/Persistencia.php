@@ -23,10 +23,12 @@ class Persistencia implements InterfaceControladorRequisicao
 
         $fields = $this->preparaStream($arquivo_tmp);
 
-
-
-        foreach ($fields as $linhas){
-            // percorro a linha pegandos os itens
+        if(count($fields) === 0){
+            $tipo = "danger";
+            $this->defineMensagem($tipo,'Não existe nenhum dado no arquivo. Por favor verifique e envie novamente.');
+        }else{
+            foreach ($fields as $linhas){
+                // percorro a linha pegandos os itens
                 $comprador = $linhas[0];
                 $descricao =  $linhas[1];
                 $precoUnit =  $linhas[2];
@@ -41,12 +43,13 @@ class Persistencia implements InterfaceControladorRequisicao
                 $compra->setQtd($qtd);
                 $compra->setEndereco($endereco);
                 $compra->setFornecedor($fornecedor);
-
+                // Insere os dados no Banco
                 $this->entityManeger->persist($compra);
                 $this->entityManeger->flush();
-
+            }
+            $this->defineMensagem("success","Dados da compra inseridos com sucesso!");
         }
-        $this->defineMensagem("success","Dados da compra inseridos com sucesso!");
+
         header("Location: /novo", true, 302);
 
     }
@@ -67,13 +70,6 @@ class Persistencia implements InterfaceControladorRequisicao
         }
         // eliminando os indices da primeira coluna
         array_shift($fields);
-
-        // Verificação se existe dados para serem persistidos no Banco.
-        if(count($fields) === 0){
-            $tipo = "danger";
-            $this->defineMensagem($tipo,'Não existe nenhum dado no arquivo. Por favor verifique e envie novamente.');
-            header('Location: /novo', true, 204);
-        }
 
         return $fields;
         

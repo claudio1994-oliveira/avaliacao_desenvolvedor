@@ -10,14 +10,6 @@ if(!array_key_exists($caminho, $rotas)){
     http_response_code(404);
     exit();
 }
-/*
-session_start();
-$rotaDeCaminho = stripos($caminho, 'login');
-if (!isset($_SESSION['logado']) && $rotaDeCaminho === false) {
-    header('Location: /login');
-    exit();
-}
-*/
 
 $classeControladora = $rotas[$caminho];
 $controlador = new $classeControladora();
