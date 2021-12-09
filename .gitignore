@@ -1,6 +1,5 @@
 vendor
 .idea/
-cli-config.php
 composer.lock
 dados - Copia.txt
 db.sqlite

@@ -56,17 +56,13 @@ class Persistencia implements InterfaceControladorRequisicao
 
     private function preparaStream($arquivo)
     {
-        session_start();
         $file = fopen($arquivo, 'r');
         $fields = [];
-
+        $count = -1;
+        // Percorrendo o arquivo e separando o campos (fields)
         while (!feof($file)){
             $linha = fgets($file);
             $fields[++$count] = explode( "\t",$linha);
-            // echo $linha;
-            foreach ($fields[$count] as $field){
-                $log =  $field . "<br>";
-            }
         }
         // eliminando os indices da primeira coluna
         array_shift($fields);

@@ -10,7 +10,7 @@ if(!array_key_exists($caminho, $rotas)){
     http_response_code(404);
     exit();
 }
-
+session_start();
 $classeControladora = $rotas[$caminho];
 $controlador = new $classeControladora();
 $controlador->processaRequisicao();
