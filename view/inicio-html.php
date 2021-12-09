@@ -9,14 +9,14 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">Inserir Compras</a>
+        <a class="navbar-brand" href="/home">Inserir Compras</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/novo">Inserir</a>
@@ -29,7 +29,10 @@
     </div>
 </nav>
 <div class="container">
-    <div class="jumbotron pt-5 pb-5">
+    <div class="pt-5 pb-5">
+        <?php if($titulo === "Home"){
+            $titulo = "Desafio Desenvolvedor Web PHP";
+        }?>
         <h1><?=$titulo; ?></h1>
     </div>
     <?php if (isset($_SESSION['mensagem'])): ?>

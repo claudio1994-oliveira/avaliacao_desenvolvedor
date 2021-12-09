@@ -98,7 +98,7 @@ class Compra
     /**
      * @return mixed
      */
-    public function getQtd()
+    public function getQuantidade()
     {
         return $this->qtd;
     }
@@ -106,7 +106,7 @@ class Compra
     /**
      * @param mixed $qtd
      */
-    public function setQtd($qtd): void
+    public function setQuantidade($qtd): void
     {
         $this->qtd = $qtd;
     }
