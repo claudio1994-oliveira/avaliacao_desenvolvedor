@@ -41,3 +41,8 @@ CREATE TABLE Compra (
     DEFAULT CHARACTER SET utf8 COLLATE `utf8_unicode_ci`  
    ENGINE = InnoDB 
 ````
+Finalmente, para executar o projeto você pode usar o servidor nativo do PHP apontando para o front controller da pasta public/
+
+```` 
+php -S localhost:8080 -t public
+````
