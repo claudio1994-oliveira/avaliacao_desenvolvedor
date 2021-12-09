@@ -12,5 +12,8 @@
             "email": "claudiooliveirajr1994@outlook.com"
         }
     ],
-    "require": {}
+    "require": {
+        "doctrine/orm": "^2.10",
+        "symfony/cache": "^6.0"
+    }
 }

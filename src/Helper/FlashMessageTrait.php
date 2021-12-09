@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Cursos\Helper;
+namespace  Claud\Avaliacao\Helper;
 
 trait FlashMessageTrait
 {

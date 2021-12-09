@@ -1,27 +1,27 @@
 <?php
 
-namespace Alura\Cursos\Controller;
+namespace Claud\Avaliacao\Controller;
 
-use Alura\Cursos\Entity\Curso;
-use Alura\Cursos\Helper\RenderizadorDeHtmlTrait;
-use Alura\Cursos\Infra\EntityManagerCreator;
+use Claud\Avaliacao\Entity\Compra;
+use Claud\Avaliacao\Helper\RenderizadorDeHtmlTrait;
+use Claud\Avaliacao\Infra\EntityManagerCreator;
 
-class ListarCursos implements InterfaceControladorRequisicao
+class ListarCompras implements InterfaceControladorRequisicao
 {
     use RenderizadorDeHtmlTrait;
-    private $repositorioDeCursos;
+    private $repositorioDeCompras;
     public function __construct()
     {
         $entityManager = (new EntityManagerCreator())->getEntityManager();
-        $this->repositorioDeCursos =  $entityManager->getRepository(Curso::class);
+        $this->repositorioDeCompras =  $entityManager->getRepository(Compra::class);
 
     }
     
     public function processaRequisicao(): void
     {
-        $cursos = $this->repositorioDeCursos->findAll();
+        $compras = $this->repositorioDeCompras->findAll();
 
-        echo $this->rederizaHtml('cursos/listar-cusos.php',['cursos'=>$cursos, 'titulo'=>'Listar Cursos']);
+        echo $this->rederizaHtml('compras/listar-todos.php',['compras'=>$compras, 'titulo'=>'Listar Compras']);
 
     }
 
