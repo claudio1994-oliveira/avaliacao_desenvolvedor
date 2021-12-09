@@ -1,0 +1,8 @@
+#Configurações do Banco de Dados MySql
+HOST=MEU_HOST
+DBNAME=MINHA_BASE
+USER=MEU_USUARIO
+PASSWORD=MINHA_SENHA
+
+#Configurações do Banco de Dados SqLite
+PATH=CAMINHA_DO_BANCO

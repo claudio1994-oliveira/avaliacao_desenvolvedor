@@ -24,3 +24,5 @@ foreach ($fields[$count] as $field){
 //var_dump($fields[0]);
 
 fclose($file);
+
+echo getenv('DBNAME');

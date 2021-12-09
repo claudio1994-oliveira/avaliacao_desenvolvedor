@@ -12,16 +12,25 @@ class EntityManagerCreator
     {
         $paths = [__DIR__ . '/../Entity'];
         $isDevMode = false;
-
-        $dbParams = array(
+        /*
+         * Caso Precise testar com um Banco Sqlite
+        $connectionParams = array(
             'driver' => 'pdo_sqlite',
-            'path' => __DIR__ . '/../../db.sqlite'
+            'path' => __DIR__ . $_ENV['PATH']
+        );*/
+
+        $connectionParams = array(
+            'dbname' => $_ENV['DBNAME'],
+            'user' => $_ENV['USER'],
+            'password' => $_ENV['PASSWORD'],
+            'host' => $_ENV['HOST'],
+            'driver' => 'pdo_mysql',
         );
 
         $config = Setup::createAnnotationMetadataConfiguration(
             $paths,
             $isDevMode
         );
-        return EntityManager::create($dbParams, $config);
+        return EntityManager::create($connectionParams, $config);
     }
 }
