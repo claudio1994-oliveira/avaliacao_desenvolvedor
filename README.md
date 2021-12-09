@@ -8,10 +8,18 @@ Tecnologias adotadas: PHP, Doctrine ORM, MySql, Bootstrap, Arquitetura MVC e Dot
 
 ### Deployment da aplicação
 
-Para configurar o projeto tem que executar o comando composer dump para baixar as dependências.
+Para configurar o projeto tem que executar os comandos do composer para baixar as dependências.
 
 ```` 
 composer dump-autoload
+````
+
+```` 
+composer install
+````
+ou
+```` 
+composer update
 ````
 No projeto foi usado o Doctrine ORM para mapear a entidade de compra e facilitar o uso com o banco de dados. 
 Foi usado também o pacote do DotEnv para mapear as variáveis de ambiente.
