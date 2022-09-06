@@ -1,7 +1,6 @@
 ## Descrição do projeto
 
 Uma interface web que aceita upload de arquivos em txt com dados de compras para armazenar no banco de dados,
-Sua aplicação web DEVE:
 
 
 Tecnologias adotadas: PHP, Doctrine ORM, MySql, Bootstrap, Arquitetura MVC e Dotenv.
