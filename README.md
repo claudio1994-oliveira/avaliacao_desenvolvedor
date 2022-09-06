@@ -9,9 +9,6 @@ Tecnologias adotadas: PHP, Doctrine ORM, MySql, Bootstrap, Arquitetura MVC e Dot
 
 Para configurar o projeto tem que executar os comandos do composer para baixar as dependências.
 
-```` 
-composer dump-autoload
-````
 
 ```` 
 composer install
