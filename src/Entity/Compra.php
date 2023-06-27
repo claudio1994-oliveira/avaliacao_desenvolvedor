@@ -1,6 +1,10 @@
 <?php
 
 namespace Claud\Avaliacao\Entity;
+
+use Doctrine\ORM\Mapping\{Id, Column, Entity, GeneratedValue};
+
+
 /**
  * @Entity
  */
@@ -142,5 +146,4 @@ class Compra
     {
         $this->fornecedor = $fornecedor;
     }
-
 }
