@@ -29,7 +29,10 @@ class EntityManagerCreator
 
         $config = Setup::createAnnotationMetadataConfiguration(
             $paths,
-            $isDevMode
+            $isDevMode,
+            null,
+            null,
+            false
         );
         return EntityManager::create($connectionParams, $config);
     }
